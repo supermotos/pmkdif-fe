@@ -1,0 +1,170 @@
+@import '../variable.scss';
+
+@mixin button-bg($bg, $tc) {
+  background: $bg;
+  color: $tc;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $bg;
+    color: $tc;
+    background-color: $bg !important;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.btn {
+  height: 40px;
+  font-family: $text-font-bold;
+  font-size: 20px;
+  letter-spacing: 0;
+  text-transform: none;
+  outline: none;
+  padding: 0 20px 0 20px;
+  min-width: 130px;
+  border-radius: 4px;
+  border: 0;
+  background-color: transparent;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.btn:last-child {
+  // margin-left: 0;
+  margin-right: 0;
+  padding-top: 50 !important;
+}
+
+.btn-primary {
+  @include button-bg($angular-text-primary, $white);
+}
+
+.btn-warning {
+  @include button-bg($angular-btn-yellow, $dark-blue-gray);
+}
+
+.btn-success {
+  @include button-bg($angular-tint, $white);
+}
+
+.btn-danger {
+  @include button-bg($angular-icon-red, $white);
+}
+
+.btn-secondary {
+  @include button-bg(rgba(255, 255, 255, 0.00), $white);
+  opacity: 0.3;
+  border: 1px solid $white;
+}
+
+.btn-link {
+  color: $angular-text-primary;
+}
+
+.btn-lg {
+  min-width: 180px;
+  height: 60px;
+  font-size: 24px;
+}
+
+.btn-sm {
+  min-width: 90px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.btn-outline-primary {
+  color: $angular-text-primary;
+  border: 1px solid $angular-text-primary;
+
+  // background: $white;
+  &:hover {
+    background-color: transparent !important;
+    color: $angular-text-primary;
+    border: 1px solid $angular-text-primary;
+  }
+}
+
+.btn-outline-warning {
+  color: $angular-btn-yellow;
+  border: 1px solid $angular-btn-yellow;
+
+  // background: $white;
+  &:hover {
+    background-color: transparent !important;
+    color: $angular-btn-yellow;
+  }
+}
+
+.btn-outline-success {
+  color: $angular-tint;
+  border: 1px solid $angular-tint;
+
+  // background: $white;
+  &:hover {
+    background-color: transparent !important;
+    color: $angular-tint;
+  }
+}
+
+.btn-outline-danger {
+  color: $angular-charged-red;
+  border: 1px solid $angular-charged-red;
+
+  // background: $white;
+  &:hover {
+    background-color: transparent !important;
+    color: $angular-charged-red;
+  }
+}
+
+.btn-dash {
+  border-style: dotted;
+
+  &:hover {
+    background-color: transparent !important;
+  }
+}
+
+.btn.btn-primary[disabled],
+.btn.btn-warning[disabled],
+.btn.btn-success[disabled],
+.btn.btn-danger[disabled],
+.btn.btn-outline-primary[disabled],
+.btn.btn-outline-warning[disabled],
+.btn.btn-outline-success[disabled],
+.btn.btn-outline-danger[disabled] {
+  @include button-bg($light-violetish-gray, $blue-violetish-gray);
+  border: 0;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-outline-primary.dropdown-toggle,
+.show>.btn-outline-primary.dropdown-toggle:focus {
+  background-color: transparent;
+  border-color: $angular-text-primary;
+  color: $angular-text-primary;
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle,
+.show>.btn-primary.dropdown-toggle:focus {
+  background-color: transparent;
+  border-color: $angular-text-primary;
+  color: $white;
+  box-shadow: none;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: none;
+}

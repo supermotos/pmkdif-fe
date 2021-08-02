@@ -1,0 +1,30 @@
+.login-component {
+  body {
+    background-color: #f5f5f5 !important;
+  }
+
+  .form-control {
+    font-size: 1rem;
+  }
+
+  .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  .mt-6 {
+    margin-top: 5rem;
+  }
+
+  .btn {
+    margin-left: 0px;
+    width: 100%;
+    font-size: 21px;
+  }
+}

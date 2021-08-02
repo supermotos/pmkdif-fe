@@ -1,0 +1,115 @@
+@import './typography.scss';
+//size
+$dirty-border-size: 5px;
+
+// Yellow
+$angular-orange-light: #f8b100;
+$angular-btn-yellow: #f5b752;
+$dark-gamboge: #f0ad4e;
+$mid-yellow: #FAC748;
+$mid-light-yellow: #F0C05C;
+$very-mid-yellow: #FDAB00;
+$dirty-border-yellow: #F0A53E;
+$dirty-bg-yellow: #FFF9EB;
+$charged-yellow: #FFF0BF;
+
+// Grey to Black
+$angular-body-text: #0f0f0f;
+$angular-text-secondary: #9e9aa4;
+$dark-blue-gray: #35323b;
+$light-violetish-gray: #f3f1f5;
+$black: #000000;
+$mid-black: #495057;
+$blue-violetish-gray: #c9c6ce;
+$dark-gray-light: #555555;
+$dark-mid-gray:#e9ecef;
+$light-gray: #a7a7a7;
+$mid-dark-gray: #b7b7b7;
+$very-light-grey: #f9f9f9;
+$pinkish-grey: #fde7e8;
+$light-blue-violet-gray: #f3f1f6;
+$dark-gray: #313131;
+$very-dark-gray: #70706F;
+$mid-gray: #707070;
+$very-mid-gray: #939394;
+$mid-light-gray: #E8E4EA;
+$mid-purple-gray: #7730C1;
+$very-mid-purple: #7530C1;
+$light-blue-gray: #d9e4ea;
+$dark-gray-bold: #565656;
+$purple-very-light-grey: #f5f3f6;
+$purple-dark-grey: #736E7A;
+$purple-dark: #4A2886;
+$dark-mid-purple: #4B2886;
+$light-black: #EAE7EC;
+$bright-purple: #F0EBFB;
+$bright-grey: #F5F5F5;
+$light-purple: #C8B9E2;
+$lighter-purple: #EBDFF8;
+$charged-gray: #E6E6E6;
+$mid-light-purple: #E6C8F4;
+$very-light-purple: #E4D6F3;
+$purple-dark-one: #572487;
+$purple-dark-two: #7A4DAF;
+$purple-dark-three: #A86ADA;
+$purple-dark-four: #CEABEB;
+$purple-dark-five: #F2EDF5;
+
+
+// Red
+$angular-charged-red: #da0000;
+$charged-red:#FF0303;
+$light-red: #ff5050;
+$very-light-red: #f7cccc;
+$bright-red: #ffe9ea;
+$very-bright-red: #fbf3f4;
+$angular-icon-red: #e86666;
+$mid-bright-red: #FDE7E8;
+$mid-red: #e86666;
+$angular-red: #FA0A0A;
+$mid-dark-red: #FC1F1F;
+$very-mid-red: #FC0202;
+$very-dark-red: #D10B0B;
+
+// Green
+$angular-tint: #20c9a7;
+$medium-turquoise: #20cba8;
+$angular-green: #25CC10;
+$mid-light-green: #23B129;
+
+// Brown
+$mid-dark-brown: #C15D31;
+
+// Purple
+$angular-text-primary: #7631c1;
+$medium-blue-violet: #4f2a81;
+$medium-blue-violet-fade: #4e2a82;
+$purple-middle-grey: #f3eaf7;
+
+// Blue
+$mid-blue: #369AEF;
+$charged-blue: #4F9AC8;
+$primary-blue: #0075FE;
+$navy-blue: #DFECF7;
+
+// White
+$white: #ffffff;
+$angular-white-silver: #cccccc;
+$almost-white: #FAFAFA;
+$purple-light-grey: #EAE7EC;
+$body-font: 'tahoma';
+$body-font-secondary: 'PSL';
+$body-font-secondary-bold: 'PSL-Bd';
+$body-font-bold: 'TahomaBold';
+$label-font: 'DBHelvethaicaX-55Regular';
+$label-font-light: 'DBHelvethaicaLight';
+$label-font-med: 'DBHelvethaicaX-65Med';
+$label-font-bold: 'DBHelvethaicaBold';
+$text-font: 'DBHeavent';
+$text-font-bold: 'DBHeavent-Bold';
+$text-font-med: 'DBHeavent-Med';
+$text-font-thin: 'DBHeavent-Thin';
+$text-th-font: 'THSarabunNew';
+$text-th-font-bold: 'THSarabunNew-Bd';
+$text-th-font-bold-italic: 'THSarabunNew-BdIt';
+$text-th-font-italic: 'THSarabunNew-It';

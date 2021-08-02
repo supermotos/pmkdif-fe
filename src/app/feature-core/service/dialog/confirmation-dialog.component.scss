@@ -1,0 +1,26 @@
+.confirm-modal {
+
+  .modal-header,
+  .modal-footer {
+    border: 0px;
+  }
+
+  .modal-header,
+  .modal-body {
+    div {
+      margin: -8px 0px -8px 0px;
+    }
+
+    .text-center {
+      white-space: pre-line;
+    }
+
+    .message {
+      word-wrap: break-word;
+    }
+  }
+
+  .fa-warning {
+    color: orange;
+  }
+}

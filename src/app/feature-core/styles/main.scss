@@ -1,0 +1,457 @@
+@import './variable.scss';
+@import './elements/button.scss';
+@import './elements/radio.scss';
+@import './elements/checkbox.scss';
+@import './template-style.scss';
+
+body {
+  font-family: $body-font;
+  font-size: 14px;
+}
+
+.iAngular-logo {
+  min-height: 150px;
+  background-image: url("./images/angular-1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-left: 150px;
+}
+
+input[type=text] {
+  font-family: $text-font;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.error {
+  color: $angular-charged-red;
+}
+
+.light-red {
+  color: $mid-dark-red;
+}
+
+.red {
+  color: $charged-red;
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.form-control-search {
+  font-family: $body-font !important;
+  font-size: 0.8rem;
+  padding: 2px 12px 2px 38px;
+}
+
+textarea {
+  &.form-control {
+    padding: 2px 10px 2px 10px;
+  }
+}
+
+.col-sm,
+.col-md,
+.col-lg,
+.col-lg-extra {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.col-sm {
+  width: 70px;
+}
+
+.col-md {
+  width: 130px;
+}
+
+.col-lg {
+  width: 190px;
+}
+
+.col-lg-extra {
+  width: 250px;
+}
+
+.ml-inherit {
+  margin-left: inherit;
+}
+
+.overflow-hidden {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.wrap-word {
+  white-space: initial;
+  word-break: break-word;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.modal-dialog {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.modal-fit-content>.modal-dialog {
+  height: unset;
+  max-width: fit-content;
+}
+
+.lg>.modal-dialog {
+  height: unset;
+  max-width: 1000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+input[type=text].error {
+  border: 1px solid $mid-dark-red;
+}
+
+textarea.error {
+  border: 1px solid $mid-dark-red;
+}
+
+.ng-select {
+  font-family: $body-font-secondary;
+  font-size: 18px;
+
+  input {
+    color: $mid-black;
+    padding-top: 1px;
+  }
+
+  .ng-option {
+    line-height: 0.8;
+  }
+
+  .ng-dropdown-panel {
+    z-index: 9999;
+  }
+}
+
+.error-msg {
+  font-family: $body-font-secondary;
+  font-size: 16px;
+  color: $mid-dark-red;
+}
+
+.textarea-fixed {
+  resize: none;
+  overflow: auto;
+}
+
+.cdk-overlay-container {
+  z-index: 9999999 !important;
+}
+
+.cdk-global-overlay-wrapper,
+.cdk-overlay-container {
+  z-index: 9999999 !important;
+}
+
+.modal-xl .modal-lg {
+  max-width: 43%;
+}
+
+@media (min-width: 1200px) {
+  .modal-xl {
+    min-width: -webkit-fill-available;
+  }
+}
+
+.popover {
+  font-family: $body-font-secondary;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+
+  .popover-header {
+    font-family: $body-font-secondary-bold;
+    font-size: 19px;
+  }
+
+  .popover-body {
+    word-break: break-all;
+  }
+}
+
+.btn.btn-primary[disabled],
+.btn.btn-primary[disabled]:hover {
+  background: #d2d2d2 !important;
+  color: #a7a7a7;
+}
+
+//-------------- Floating Label Material ----------------
+.mat-form-field {
+  .ng-select.ng-select-disabled>.ng-select-container {
+    background-color: $white;
+  }
+
+  .ng-select .ng-arrow-wrapper .ng-arrow {
+    border-color: $purple-dark transparent transparent;
+    border-style: solid;
+    border-width: 5px 5px 2.5px;
+  }
+
+  .ng-select.ng-select-opened>.ng-select-container .ng-arrow {
+    top: -2px;
+    border-color: transparent transparent $purple-dark;
+    border-width: 0 5px 5px;
+  }
+
+  display: contents !important;
+  font-family: $body-font-secondary !important;
+
+  .mat-form-field-label {
+    color: $purple-dark !important;
+    font-weight: 600;
+  }
+
+  .mat-input-element,
+  .ng-select {
+    font-size: 18px;
+    font-family: $body-font-secondary;
+  }
+
+  .mat-input-element:disabled {
+    color: #212529;
+  }
+
+  .mat-form-field-underline,
+  .mat-form-field-ripple {
+    background-color: transparent !important;
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+  }
+
+  .form-control-calendar {
+    position: absolute;
+    width: 90%;
+    text-align: end;
+    pointer-events: none;
+    font-size: 18px;
+    line-height: 1rem;
+    color: $purple-dark;
+    right: 0.5rem;
+  }
+
+  .owl-dt-container-disabled,
+  .owl-dt-trigger-disabled {
+    opacity: unset;
+  }
+
+  .ng-select.ng-select-single .ng-select-container .ng-value-container,
+  .ng-select.ng-select-single .ng-select-container .ng-value-container .ng-value {
+    overflow: visible;
+  }
+
+  .ng-select .ng-clear-wrapper {
+    padding-left: 5px;
+  }
+}
+
+.mat-form-field-flex {
+  padding: 0.1em 1em;
+  background-color: white;
+  border-radius: 0.28rem;
+  border: 1px solid #a5a5a5;
+
+  .ng-select {
+    top: 0.4rem;
+
+    .ng-select-container {
+      height: auto !important;
+
+      .ng-value-containe,
+      .ng-value {
+        white-space: normal !important;
+      }
+    }
+  }
+
+  .mat-field-md {
+    padding-top: 0.7em;
+  }
+}
+
+.ng-touched.mat-form-field-invalid {
+  .mat-form-field-flex {
+    border: 1px solid $mid-dark-red;
+  }
+}
+
+.mat-form-field-hide-placeholder {
+  .mat-form-field-label-wrapper {
+    top: -0.9rem;
+  }
+
+  .mat-form-field-infix {
+    bottom: 0.2475em;
+  }
+
+  .mat-form-field-label {
+    font-size: 18px;
+  }
+
+  .fa-calendar {
+    bottom: 0.5675em;
+  }
+}
+
+.mat-form-field-should-float {
+  .mat-form-field-label-wrapper {
+    top: -0.7em;
+  }
+
+  .mat-form-field-label {
+    font-size: 20px;
+  }
+
+  .fa-calendar {
+    bottom: 0.7475em;
+  }
+}
+
+.mat-form-field-hide-placeholder,
+.mat-form-field-should-float {
+  .ng-select {
+
+    .ng-select-container,
+    .ng-select-container:hover,
+    .ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+      border: 0 !important;
+      box-shadow: none !important;
+    }
+
+    .ng-select-container {
+      .ng-value-container {
+        padding-left: 0;
+
+        .ng-input {
+          padding-left: 0 !important;
+        }
+      }
+    }
+
+    .ng-dropdown-panel {
+      .ng-option {
+        white-space: pre-line;
+      }
+    }
+  }
+}
+
+.mat-form-field-disabled {
+  .mat-form-field-label {
+    color: rgba(0, 0, 0, .6) !important;
+  }
+
+  .mat-form-field-underline {
+    background-image: none !important;
+  }
+}
+
+.mat-form-field-suffix {
+  color: $purple-dark;
+  font-size: 16px;
+  top: -0.2rem;
+}
+
+.mat-select-sm {
+  .mat-form-field-flex {
+    padding: 0.1em 0.5em;
+  }
+
+  .ng-select.ng-select-single .ng-select-container {
+    min-height: 20px;
+
+    .ng-value-container .ng-input {
+      top: 0px;
+    }
+  }
+
+  .ng-select {
+    top: 0rem;
+
+    .ng-arrow-wrapper {
+      padding: 0 5px 0 10px;
+    }
+  }
+}
+
+//-------------- End Floating Label Material ----------------
+
+.dirty-fields {
+  input[type=text] {
+    background-color: $dirty-bg-yellow;
+    border-color: $dirty-border-yellow;
+    border-radius: $dirty-border-size;
+  }
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+
+input {
+  outline: none;
+}
+
+.button-list {
+  .bt-font {
+    font-size: 20px;
+  }
+
+  .btn {
+    margin: 0.32rem 0.5rem;
+  }
+
+  .btn[disabled] {
+    background: $mid-gray;
+    color: $light-gray;
+
+    &:hover {
+      background: $light-gray !important;
+      color: $mid-gray;
+    }
+  }
+}
+
+.cld-display {
+  display: inline;
+}
+
+.btn-icon {
+  padding: 0 6px;
+  margin: 0;
+  min-width: 0;
+}

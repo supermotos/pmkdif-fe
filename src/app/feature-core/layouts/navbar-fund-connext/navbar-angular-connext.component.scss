@@ -1,0 +1,102 @@
+@import '../../styles/variable.scss';
+
+.navbar-angular-connext {
+  background-color: $purple-dark;
+  padding: 3px 10px;
+
+  .container {
+    min-width: calc(100% - 200px);
+    max-width: calc(100% - 80px);
+    min-height: 38px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .fa-bars,
+  .fa-user-circle-o {
+    color: white;
+  }
+
+  .btn-sidebar.btn {
+    padding: 0 10px 0 10px;
+    border-color: white;
+  }
+
+  .btn-sidebar.btn-sm {
+    height: 30px;
+    min-width: 40px;
+  }
+
+  .angular-font {
+    color: white;
+    font-family: $text-font;
+    margin-left: 28px;
+    font-size: 24px;
+  }
+
+  .angular-connext-font {
+    color: #EFA23C;
+    padding-left: 12px;
+    font-size: 20px;
+  }
+
+  .angular-logo {
+    min-height: 25px;
+    background-image: url("./logo.ico");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .btn-logout {
+    color: #FFF;
+    border-color: #FFF;
+    min-width: 70px;
+    height: 30px;
+    padding: 0 0 0 0;
+  }
+
+  span.user {
+    color: black;
+    font-size: 18px;
+    font-family: $text-font;
+  }
+
+  div.popcontent {
+    width: 250px;
+  }
+
+  .btn-danger {
+    margin: 0;
+    width: 100%;
+  }
+
+  .current-date {
+    font-family: $text-font;
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    color: white;
+    margin: -5px 20px 0 0;
+  }
+
+  .arrow {
+    display: none;
+
+    &::before,
+    &::after {
+      overflow: hidden;
+      display: none;
+    }
+  }
+
+  .row.mr3 {
+    display: flex;
+    align-items: center;
+  }
+
+  .fa-user-circle-o {
+    font-size: 20px;
+  }
+
+}

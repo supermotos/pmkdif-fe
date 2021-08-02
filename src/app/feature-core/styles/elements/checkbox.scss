@@ -1,0 +1,160 @@
+/*
+ * author:evanliu2968
+ * github:https://github.com/EvanLiu2968/el-checkbox
+ * lincense:MIT
+ */
+@import './color.scss'; //color variables
+@import './size.scss'; //size variables
+
+/*checkbox component*/
+
+.el-checkbox,
+.dirty-checkbox {
+  position: relative;
+  font-size: $el-size-default;
+}
+
+label.el-checkbox,
+label.dirty-checkbox {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.el-checkbox>input[type="checkbox"],
+.dirty-checkbox>input[type="checkbox"] {
+  display: none;
+}
+
+.el-checkbox>input[type="checkbox"][disabled],
+.dirty-checkbox>input[type="checkbox"][disabled] {
+  cursor: not-allowed;
+}
+
+.el-checkbox>input[type="checkbox"]+.el-checkbox-style,
+.dirty-checkbox>input[type="checkbox"]+.el-checkbox-style {
+  position: relative;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.el-checkbox>input[type="checkbox"]+.el-checkbox-style:hover:before,
+.dirty-checkbox>input[type="checkbox"]+.el-checkbox-style:hover:before {
+  border-color: $el-default;
+}
+
+.el-checkbox>input[type="checkbox"]+.el-checkbox-style:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  content: '';
+  border: 1px solid $el-gray;
+}
+
+.dirty-checkbox>input[type="checkbox"]+.el-checkbox-style:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  content: '';
+  border: 3px solid $dirty-border-yellow;
+}
+
+.el-checkbox>input[type="checkbox"]+.el-checkbox-style:after,
+.dirty-checkbox>input[type="checkbox"]+.el-checkbox-style:after {
+  position: absolute;
+  display: none;
+  content: '';
+}
+
+.el-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style,
+.dirty-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style {
+  cursor: not-allowed;
+  color: $el-gray-light
+}
+
+.el-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:hover,
+.el-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:before,
+.el-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:after,
+.dirty-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:hover,
+.dirty-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:before,
+.dirty-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:after {
+  cursor: not-allowed;
+}
+
+.el-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:hover:before,
+.dirty-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:hover:before {
+  border: 1px solid $el-gray-light;
+  animation-name: none;
+}
+
+.el-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:before,
+.dirty-checkbox>input[type="checkbox"][disabled]+.el-checkbox-style:before {
+  border-color: $el-gray-light;
+}
+
+.el-checkbox>input[type="checkbox"]:checked+.el-checkbox-style:before,
+.dirty-checkbox>input[type="checkbox"]:checked+.el-checkbox-style:before {
+  animation-name: none;
+}
+
+.el-checkbox>input[type="checkbox"]:checked+.el-checkbox-style:after,
+.dirty-checkbox>input[type="checkbox"]:checked+.el-checkbox-style:after {
+  display: block;
+}
+
+.el-checkbox>input[type="checkbox"]+.el-checkbox-style:before,
+.dirty-checkbox>input[type="checkbox"]+.el-checkbox-style:before {
+  border-radius: 3px;
+  background-color: white;
+}
+
+.el-checkbox>input[type="checkbox"]+.el-checkbox-style:after,
+.dirty-checkbox>input[type="checkbox"]+.el-checkbox-style:after {
+  top: 0.15em;
+  left: 0.5em;
+  box-sizing: border-box;
+  width: 0.4em;
+  height: 0.85em;
+  transform: rotate(45deg);
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+
+.el-checkbox>input[type="checkbox"]:checked+.el-checkbox-style:before {
+  border: $el-default;
+  background: $el-default;
+}
+
+.dirty-checkbox>input[type="checkbox"]:checked+.el-checkbox-style:before {
+  border: 3px solid $dirty-border-yellow;
+  background: $el-default;
+}
+
+.el-checkbox>input[type="checkbox"]:checked[disabled]+.el-checkbox-style:before {
+  border: $el-default-light;
+  background: $el-default-light;
+}
+
+.dirty-checkbox>input[type="checkbox"]:checked[disabled]+.el-checkbox-style:before {
+  border: 3px solid $dirty-border-yellow;
+  background: $el-default-light;
+}
+
+/*define size*/
+.el-checkbox.el-checkbox-sm,
+.dirty-checkbox.el-checkbox-sm {
+  font-size: $el-size-small;
+}
+
+.el-checkbox.el-checkbox-lg,
+.dirty-checkbox.el-checkbox-lg {
+  font-size: $el-size-large;
+}

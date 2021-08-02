@@ -1,0 +1,20 @@
+.side-nav {
+  .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    perspective: 1500px;
+  }
+
+  .container {
+    padding: 10px 20px 20px 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+  }
+}
+
+.display-hidden-app-component {
+  display: block;
+  overflow: hidden;
+  height: 0;
+}

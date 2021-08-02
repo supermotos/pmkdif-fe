@@ -1,0 +1,53 @@
+@import '../../styles/variable.scss';
+
+.modal-show {
+  font-family: $text-font;
+  letter-spacing: 0.7px;
+
+  .modal-header {
+    border-bottom: 0;
+    padding-bottom: 0;
+
+    .header-title {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+
+  .modal-body {
+    padding-top: 10px;
+
+    .fa-info {
+      color: rgb(0, 162, 255);
+    }
+
+    .fa-info-circle {
+      color: rgb(0, 162, 255);
+    }
+
+    .fa-warning {
+      color: orange;
+    }
+
+    .fa-exclamation-triangle {
+      color: red;
+    }
+
+    .fa-check {
+      color: green;
+    }
+
+    .btn {
+      margin-left: 0px;
+    }
+
+    .message {
+      font-size: 18px;
+      margin-top: 10px;
+      width: 400px; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
+    }
+  }
+}

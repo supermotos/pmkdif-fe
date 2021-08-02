@@ -1,0 +1,19 @@
+<div class="confirm-modal">
+  <div class="modal-header">
+    <div class="col-sm-12 text-center">
+
+      <i class="fa fa-3x fa-warning m-3"></i>
+    </div>
+
+  </div>
+  <div class="modal-body" ngbAutofocus>
+    <div class="col-sm-12 text-center">
+      <span class="message" [innerHTML]="message"></span>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-primary" name="btnConfirmCancel"
+      (click)="decline()">{{ btnCancelText }}</button>
+    <button type="button" class="btn btn-primary" name="btnConfirmOk" (click)="accept()">{{ btnOkText }}</button>
+  </div>
+</div>

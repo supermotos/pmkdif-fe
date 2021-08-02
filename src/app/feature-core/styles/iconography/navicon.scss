@@ -1,0 +1,233 @@
+@import '../variable.scss';
+@import './navicon-manage.scss';
+$universal-nav-path: '/assets/images/icons/Nav/';
+$universal-button-path: '/assets/icons/';
+
+@mixin getNavIcon($arg1, $arg2) {
+  background-size: contain;
+  background-color: $arg2;
+  -webkit-mask-size: 15px;
+  $url: #{$universal-nav-path}#{$arg1};
+  -webkit-mask: url($url)no-repeat 50% 50%;
+}
+
+@mixin getButtonIcon($arg1) {
+  $url: #{$universal-button-path}#{$arg1};
+  background: url($url) no-repeat 50% 50%;
+}
+
+.icon {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  background-size: 3vh;
+  fill: $angular-text-primary;
+
+  &.xltra-large {
+    background-size: 60px;
+    float: inherit;
+  }
+
+  &.big {
+    background-size: 45px;
+    float: inherit;
+  }
+
+  &.medium {
+    background-size: 30px;
+    float: inherit;
+  }
+
+  &.small {
+    background-size: 15px;
+    float: inherit;
+  }
+}
+
+.ic-calendar {
+  @include getNavIcon('Calendar.svg', $angular-text-primary);
+}
+
+.ic-circle-add-filled {
+  @include getNavIcon('Circle-Add-Filled.svg', $angular-text-primary);
+}
+
+.ic-add-edit {
+  @include getButtonIcon('edit.svg');
+}
+
+.ic-add-new {
+  @include getButtonIcon('add-new.svg');
+}
+
+.ic-add-new-dirty {
+  @include getButtonIcon('add-new-dirty.svg');
+}
+
+.ic-doc {
+  @include getButtonIcon('doc.svg');
+}
+
+.ic-doc-dirty {
+  @include getButtonIcon('doc-dirty.svg');
+}
+
+.ic-refresh {
+  @include getButtonIcon('refresh.svg');
+}
+
+.ic-convert {
+  @include getButtonIcon('convert.svg');
+}
+
+.ic-copy {
+  @include getButtonIcon('copy.svg');
+}
+
+.ic-delete {
+  @include getButtonIcon('delete.svg');
+}
+
+.ic-view-approve {
+  @include getButtonIcon('view-approve.svg');
+}
+
+.ic-view {
+  @include getButtonIcon('view.svg');
+}
+
+.ic-notification-filled-red {
+  @include getButtonIcon('notification.svg');
+}
+
+.ic-correct-circle-no-fill {
+  @include getButtonIcon('correct-circle-no-fill.svg');
+}
+
+.ic-correct-circle-green {
+  @include getButtonIcon('correct-circle-green.svg');
+}
+
+.ic-correct-circle-gray {
+  @include getButtonIcon('correct-circle-gray.svg');
+}
+
+.ic-correct-circle-black {
+  @include getButtonIcon('correct-circle-black.svg');
+}
+
+.ic-admin {
+  @include getButtonIcon('admin.svg');
+}
+
+.ic-daily-txn {
+  @include getButtonIcon('daily-txn.svg');
+}
+
+.ic-enquiry {
+  @include getButtonIcon('enquiry.svg');
+}
+
+.ic-maintenance {
+  @include getButtonIcon('maintenance.svg');
+}
+
+.ic-other-txn {
+  @include getButtonIcon('other-txn.svg');
+}
+
+.ic-payment-txn {
+  @include getButtonIcon('payment-txn.svg');
+}
+
+.ic-search-menu {
+  @include getButtonIcon('search-menu.svg');
+}
+
+.ic-setup {
+  @include getButtonIcon('setup.svg');
+}
+
+.ic-date-range {
+  @include getButtonIcon('date-range.svg');
+}
+
+.ic-description {
+  @include getButtonIcon('description.svg');
+}
+
+.ic-equalizer {
+  @include getButtonIcon('equalizer.svg');
+}
+
+.ic-folder-shared {
+  @include getButtonIcon('folder-shared.svg');
+}
+
+.ic-list {
+  @include getButtonIcon('list.svg');
+}
+
+.ic-note {
+  @include getButtonIcon('note.svg');
+}
+
+.ic-people {
+  @include getButtonIcon('people.svg');
+}
+
+.ic-pie-chart {
+  @include getButtonIcon('pie-chart.svg');
+}
+
+.ic-post-add {
+  @include getButtonIcon('post-add.svg');
+}
+
+.ic-regulatory {
+  @include getButtonIcon('regulatory.svg');
+}
+
+.ic-sync {
+  @include getButtonIcon('sync.svg');
+}
+
+.ic-clock {
+  @include getButtonIcon('clock.svg');
+}
+
+.ic-sorting {
+  @include getButtonIcon('sorting.svg');
+}
+
+.ic-book-note {
+  @include getButtonIcon('book-note.svg');
+}
+
+.ic-checked {
+  @include getButtonIcon('checked.svg');
+}
+
+.ic-switching {
+  @include getButtonIcon('switching.svg');
+}
+
+.ic-info {
+  @include getButtonIcon('info.svg');
+}
+
+.ic-print {
+  @include getButtonIcon('print.svg');
+}
+
+.ic-print-disable {
+  @include getButtonIcon('print-disable.svg');
+}
+
+.ic-print-white {
+  @include getButtonIcon('print-white.svg');
+}
+
+.ic-log {
+  @include getButtonIcon('log.svg');
+}

@@ -1,0 +1,71 @@
+<div [ngClass]="{'fade-wrapper': isFade}"></div>
+<nav class="sidebar" [ngClass]="{ 'active': navbarOpen }" id="nav">
+  <ul class="list-unstyled components">
+    <li class="active">
+      <div>
+        <div *ngFor="let menuGroup of menuGroups; let index = index;">
+          <div class="group-menu">
+            <div class="dropdown">
+              <div (click)="showMenu(index)">
+                <i class="icon icon-padding medium {{groupMenuIcon[menuGroup?.id]?.icon}}" aria-hidden="true"
+                  [ngClass]="{'icon-focus': isShowMenu[index] || index === realIndex}"></i>
+                <div class="mt-menu-group">
+                  <span class="title-group-menu" id="menu-group-{{menuGroup?.id}}"> {{menuGroup?.name}} </span>
+                </div>
+              </div>
+
+              <div class="info" [ngClass]="isShowMenu[index] ? 'dis-block': 'dis-none'">
+                <div class="dropdown-content">
+                  <button type="button" class="close" aria-label="Close" (click)="onClose(index)"
+                    [ngClass]="{ 'close-menu-scroll': index !== 0 }">
+                    <span aria-hidden="true"> &times; </span>
+                  </button>
+
+                  <div *ngIf="index === 0">
+                    <div class="col-lg-11 pl-2 pr-0 search-tag">
+                      <angular-filter-by-text [id]="'txtSearchMenu'" [placeholder]="'Search Menu...'"
+                        (dataChanged)="getMenuSearch($event)" [focusElement]="focusElement" #searchMenu>
+                      </angular-filter-by-text>
+                    </div>
+                    <div class="scroll scroll-content">
+                      <div *ngFor="let menu of allMenu">
+                        <a class="menu-sub" id="menu-sub-{{menu?.code}}" (click)="toMenu(menu?.code)">
+                          {{menu?.name}}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="menu-scroll scroll" *ngIf="index !== 0">
+                    <div *ngFor="let menu of menuGroup?.menu">
+                      <a class="menu-sub" *ngIf="!menu?.menu" id="menu-sub-{{menu?.code}}" (click)="toMenu(menu?.code)">
+                        <i class="icon icon-inner {{menus[menu.code]?.icon}}" aria-hidden="true"></i>
+                        <span class="pl-2"> {{menu?.name}} </span>
+                      </a>
+                      <a class="title-menu-sub" *ngIf="menu?.menu" id="menu-{{menu?.id}}">
+                        <i class="icon icon-inner {{groupMenuIcon[menu.id]?.icon}}" aria-hidden="true"></i>
+                        <span class="pl-2"> {{menu?.name}} </span>
+                      </a>
+                      <div class="pl-4">
+                        <ul class="tree" *ngIf="menu?.menu">
+                          <li *ngFor="let menuSub of menu?.menu;">
+                            <a class="menu-sub" id="menu-sub-{{menuSub?.code}}" (click)="toMenu(menuSub?.code)">
+                              {{menuSub?.name}}
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </li>
+  </ul>
+
+</nav>

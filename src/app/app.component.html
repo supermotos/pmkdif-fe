@@ -1,0 +1,29 @@
+<div *ngIf="!isCustSuitByPass">
+  <navbar-angular-connext *ngIf="isLoginPageAngular | async" (sidenavToggleClicked)="toggleNavbar()"
+    (isHomeEmit)="isHome = $event" [isCustSuitByPass]="false">
+  </navbar-angular-connext>
+  <ngx-spinner id="loading-spinner-text" type="ball-spin-clockwise"></ngx-spinner>
+  <div class="side-nav">
+    <div class="wrapper">
+      <angular-menu [navbarOpen]="navbarOpen" *ngIf="isLoginPageAngular | async" [isHomePage]="isHome"></angular-menu>
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="isCustSuitByPass">
+  <navbar-angular-connext *ngIf="isCustSuitByPass || (isLoginPageAngular | async)"
+    (sidenavToggleClicked)="toggleNavbar()" (isHomeEmit)="isHome = $event" [isCustSuitByPass]="isCustSuitByPass"
+    [ngClass]="{'display-hidden-app-component': isCustSuitByPass}">
+  </navbar-angular-connext>
+  <ngx-spinner id="loading-spinner-text" type="ball-spin-clockwise"></ngx-spinner>
+  <div class="side-nav">
+    <div class="wrapper">
+      <div class="container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

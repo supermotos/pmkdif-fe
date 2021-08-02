@@ -1,0 +1,18 @@
+<div class="modal-show">
+  <div class="modal-header">
+    <div class="col-sm-12 text-center">
+      <span class="header-title">{{title}}</span>
+    </div>
+  </div>
+  <div class="modal-body" ngbAutofocus>
+    <div class="col-sm-12 text-center" *ngIf="icon">
+      <i class="fa fa-3x" [ngClass]="[icon]"> </i>
+    </div>
+    <div class="col-sm-12 form-group text-center">
+      <label class="message" [innerHTML]="message"></label>
+    </div>
+    <div class="col-sm-12 text-center">
+      <button class="btn btn-primary" (click)="ok()"> {{btnName}} </button>
+    </div>
+  </div>
+</div>
